@@ -12,7 +12,7 @@ fun exercise1() {
     print("Welcome! Please type your name to start: ")
     val name: String = readLine() ?: defaultName
 
-    if (name.equals(defaultName) || name.isEmpty()) {
+    if (name == defaultName || name.isEmpty()) {
         println("You did not type anything!")
     } else {
         println("Thank you for typing your name")
