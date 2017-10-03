@@ -1,4 +1,4 @@
-package basics
+package functional
 
 import java.io.File
 

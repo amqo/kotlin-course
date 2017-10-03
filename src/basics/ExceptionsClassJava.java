@@ -19,7 +19,7 @@ public class ExceptionsClassJava {
         throw new IOException();
     }
 
-    // Unchecked exception - All in Kotlin are unchecked
+    // Unchecked exception - All exceptions in Kotlin are unchecked
     private static void canThrowRuntimeException()  {
         throw new IllegalStateException();
     }

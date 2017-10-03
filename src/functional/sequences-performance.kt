@@ -1,4 +1,4 @@
-package basics
+package functional
 
 import kotlin.system.measureTimeMillis
 
@@ -6,6 +6,8 @@ val veryLongList = (1..9999999L).toList()
 val takeNumber = 10 * 1000
 
 fun main(args: Array<String>) {
+
+    println("Allocating memory, wait...")
 
     measure()
 
@@ -19,7 +21,7 @@ private fun measure() {
     var sum = 0L
     var sumLazy = 0L
 
-    // This will take the last 1000 last elemens only after the computation finished
+    // This will take the last 1000 last elements only after the computation finished
     val ms = measureTimeMillis {
         sum = veryLongList
                 .filter { it > 50 }

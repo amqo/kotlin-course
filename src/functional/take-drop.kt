@@ -1,7 +1,6 @@
-package basics
+package functional
 
 fun main(args: Array<String>) {
-
 
     // Lazy infinite list initialization
     val listSequence = generateSequence(0) {

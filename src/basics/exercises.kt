@@ -7,6 +7,7 @@ fun main(args: Array<String>) {
 }
 
 fun exercise1() {
+
     val defaultName = "default"
 
     print("Welcome! Please type your name to start: ")
@@ -20,6 +21,7 @@ fun exercise1() {
 }
 
 fun exercise2() {
+
     val randomNumbers = mutableListOf<Int>()
     for (i in 1..100) {
         randomNumbers.add((Math.random() * 100).toInt())

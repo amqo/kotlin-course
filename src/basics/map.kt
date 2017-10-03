@@ -33,4 +33,6 @@ fun main(args: Array<String>) {
     val flattenedFromMap = nestedList.map { it.sortedDescending() }.flatten()
     println(flattenedFromMap)
 
+    val flattenedAndSorted = nestedList.flatten().sortedDescending()
+    println(flattenedAndSorted)
 }

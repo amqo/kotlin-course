@@ -1,6 +1,8 @@
-package basics
+package functional
 
 fun main(args: Array<String>) {
+
+    println("Allocating memory, wait...")
 
     val veryLongList = (1..99999999L).toList()
 
@@ -12,7 +14,6 @@ fun main(args: Array<String>) {
 
     println(sum)
 
-
     // This one is better than the previous to calculate the result
     // but does not avoid the time spent allocating memory
     val sumLazy = veryLongList
@@ -23,7 +24,6 @@ fun main(args: Array<String>) {
             .sum()
 
     println(sumLazy)
-
 
     // This one avoids the time spent by the previous two allocating memory for the veryLongList
     val sumSeq = generateSequence(1, { it + 1 })
