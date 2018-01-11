@@ -1,6 +1,6 @@
 package oo
 
-abstract class Vehicle {
+abstract class Vehicle(open val brand: String = "") {
 
     open fun drive() {
         println("Driving vehicle")
@@ -8,7 +8,8 @@ abstract class Vehicle {
     abstract fun honk()
 }
 
-class Sedan : Vehicle(), Drivable {
+// var can override val, but val cannot override var
+class Sedan(override var brand: String = "Sedan") : Vehicle(), Drivable {
     override val medium = "road"
 
     override fun drive() {
