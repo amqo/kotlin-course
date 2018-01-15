@@ -1,7 +1,10 @@
 package oo
 
+import basics.getExternalInput
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent
+import java.io.IOException
+import oo.House.Factory.getNormalHouse as createHouse
 
 // This can be used as a Singleton
 // The same as class, but no constructor and has only one instance
@@ -25,4 +28,15 @@ fun main(args: Array<String>) {
 
     val country = CountryFactory.createCountry()
     println(country.name)
+
+    println(createHouse().price)
+
+    val input = try {
+        getExternalInput()
+    } catch (e: IOException) {
+        e.message
+    } finally {
+        println("Finished")
+    }
+    println(input)
 }
