@@ -21,9 +21,20 @@ class Timeline<E> {
     }
 }
 
+fun <E> timelineOf(vararg elements: E): Timeline<E> {
+    val result = Timeline<E>()
+    for (element in elements) {
+        result.add(element)
+    }
+    return result
+}
+
 fun main(args: Array<String>) {
 
     val timeline: Timeline<Int> = Timeline()
     timeline.add(2)
     println(timeline.getLatest())
+
+    val timelineIntType = timelineOf(1, 2, 3)
+    println(timelineIntType.getLatest())
 }
